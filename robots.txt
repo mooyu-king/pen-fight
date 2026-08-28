@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /game/pen-fight/test.html
+
+Host: https://penfight.org
+Sitemap: https://penfight.org/sitemap.xml

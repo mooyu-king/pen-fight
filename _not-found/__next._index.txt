@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[1133,[],""]
+3:I[4297,[],""]
+4:I[1453,["177","static/chunks/app/layout-d271598fc982a1e1.js"],""]
+:HL["/_next/static/css/14257e2117f1cc24.css","style"]
+0:{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/14257e2117f1cc24.css","precedence":"next"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":[["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}],["$","$L4",null,{"defer":true,"data-domain":"penfight.org","data-api":"https://data.1back.link/api/send","src":"https://data.1back.link/js/app.js","strategy":"afterInteractive"}]]}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"fe9kNCOPe-psU_CYVc7ld"}
