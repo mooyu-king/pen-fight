@@ -43,6 +43,18 @@ Pen Fight 是一个面向桌面浏览器的免费小游戏网站。玩家拖动�
 - 独立的 About Us、Privacy Policy、Contact、Terms of Service 页面。
 - 静态导出、Sitemap、Canonical URL、Open Graph metadata 和隐私友好的站点统计说明。
 
+## Plausible 统计
+
+主站在根布局中通过 `next/script` 加载一次 Plausible 兼容统计脚本：
+
+```text
+Script: https://data.1back.link/js/app.js
+API: https://data.1back.link/api/send
+Domain: penfight.org
+```
+
+除聚合页面访问外，站点还记录导航点击、游戏启动与全屏、成绩登记、FAQ 展开、滚动深度和停留时间等有限事件。滚动深度与定时停留使用 `interactive: false`，不会改变跳出判定；游戏启动、成绩登记等真实操作仍作为互动事件。成绩事件仅使用分数区间，不发送玩家姓名、战术备注内容、精确分数或本地排行榜。详细说明见网站的 Privacy Policy。
+
 ## 技术栈
 
 - Next.js 16（App Router）
