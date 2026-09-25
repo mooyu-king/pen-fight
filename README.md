@@ -10,7 +10,7 @@ Pen Fight 是一个面向桌面浏览器的免费小游戏网站。玩家拖动�
 
 <<<<<<< HEAD
 =======
-项目正在开发自有 3D 版本 **Pen Fight: Desk Legends**。独立游戏工程位于 `pen-fight-game/`，采用 Three.js + Rapier，并通过 `/game/desk-legends/index.html` 接入主站 iframe。当前 Phase 0 P0-B 版本已支持反向拖拽、Anchor Ghost、方向点、Power Meter、双 Pen 碰撞、Mouse/Touch、响应式画布、Fullscreen 和 iframe 通信；它仍是手感与技术 Sandbox，不代表完整关卡版本。
+项目正在开发自有 3D 版本 **Pen Fight: Desk Legends**。独立游戏工程位于 `pen-fight-game/`，采用 Three.js + Rapier。本地 `next dev` 通过 `/game/desk-legends/index.html` 验证自研版本；正式静态构建继续通过 `/game/pen-fight/index.html` 提供 GitHub 开源完整游戏。当前 Phase 0 P0-B 版本已支持反向拖拽、Anchor Ghost、方向点、Power Meter、双 Pen 碰撞、Mouse/Touch、响应式画布、Fullscreen 和 iframe 通信；它仍是手感与技术 Sandbox，不代表完整关卡版本。
 
 >>>>>>> 95a9c74 (add install-app feature)
 在线地址：[https://penfight.org/](https://penfight.org/)

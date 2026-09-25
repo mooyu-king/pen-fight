@@ -1,4 +1,4 @@
-const CACHE_NAME = "pen-fight-shell-v1";
+const CACHE_NAME = "pen-fight-shell-v2-public-game";
 const CORE_ASSETS = ["/", "/manifest.webmanifest", "/pen-fight-logo.webp", "/pwa-icon-192.png", "/pwa-icon-512.png"];
 
 self.addEventListener("install", (event) => {
