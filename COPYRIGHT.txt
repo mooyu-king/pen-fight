@@ -1,0 +1,12 @@
+Pen Fight: Desk Legends — penfight.org
+Copyright 2026 penfight.org contributors.
+
+本声明适用于本项目独立创作的 Desk Legends 程序、界面和原创内容。
+公开试玩不表示授予复制、重新托管、出售原创内容或冒充本站的许可。
+现有 Logo 与项目发行记录一起保留；本文件本身不证明商标注册或全部素材权属。
+第三方代码、模型、字体、音效、旧版游戏和其他第三方材料仍适用各自许可证及权利声明；不以本声明撤销其许可。
+权利与授权咨询请使用官网 Contact 页面。版本摘要见 /release.json。
+
+Original Desk Legends code, interface and original content are reserved by their respective contributors.
+Third-party materials retain their respective ownership and license terms.
+Public browser access is not a license to rehost the original game or impersonate penfight.org.
