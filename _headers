@@ -1,9 +1,13 @@
 /*
-  Content-Security-Policy: frame-ancestors 'self'
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
 
+/game/desk-legends/*
+  ! X-Frame-Options
+  Content-Security-Policy: frame-ancestors 'self' https://penfight.org https://www.penfight.org https://bloodmoney2.app https://templeofthejackal.com https://frankiesfunhouse.org https://choicervoicer.site http://localhost:3000 http://localhost:3001
+
 /auth/callback/*
+  Content-Security-Policy: frame-ancestors 'self'
   Cache-Control: no-store
   Referrer-Policy: no-referrer
   X-Robots-Tag: noindex, nofollow
