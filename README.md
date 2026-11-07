@@ -1,179 +1,57 @@
 # Pen Fight
 
-[![在线试玩](https://img.shields.io/badge/Play-penfight.org-e64b3c?style=for-the-badge)](https://penfight.org/)
-[![Next.js](https://img.shields.io/badge/Next.js-16-111111?style=for-the-badge&logo=nextdotjs)](https://nextjs.org/)
-[![Static Export](https://img.shields.io/badge/Deploy-Cloudflare_Pages-f4a11a?style=for-the-badge&logo=cloudflare)](https://pages.cloudflare.com/)
+[Play Pen Fight](https://penfight.org/)
 
-![Pen Fight 网站 Logo](pen-fight-logo.webp)
+Pen Fight is a browser game destination built around a small but satisfying challenge: send an opponent's pen off the desk without losing your own. You control the red pen, while the blue pen is your opponent. Direction, force and the shape of the collision all matter. A powerful shot is not automatically a good shot, especially when your own pen is already close to an edge.
 
-Pen Fight 是一个面向桌面浏览器的免费小游戏网站。玩家拖动红色笔蓄力，鼠标移动的反方向就是笔弹出的方向；松开鼠标后，目标是把蓝色对手撞出桌面，同时避免自己的红色笔掉出边界。
+![Pen Fight logo](pen-fight-logo.webp)
 
-<<<<<<< HEAD
-=======
-项目正在开发自有 3D 版本 **Pen Fight: Desk Legends**。独立游戏工程位于 `pen-fight-game/`，采用 Three.js + Rapier。本地 `next dev` 通过 `/game/desk-legends/index.html` 验证自研版本；正式静态构建继续通过 `/game/pen-fight/index.html` 提供 GitHub 开源完整游戏。当前 Phase 0 P0-B 版本已支持反向拖拽、Anchor Ghost、方向点、Power Meter、双 Pen 碰撞、Mouse/Touch、响应式画布、Fullscreen 和 iframe 通信；它仍是手感与技术 Sandbox，不代表完整关卡版本。
+## Understand your first shot
 
->>>>>>> 95a9c74 (add install-app feature)
-在线地址：[https://penfight.org/](https://penfight.org/)
+Press the red pen and drag to aim. Think of the gesture like pulling back a slingshot: the release sends the pen in the opposite direction from the drag. Start with a modest movement so that you can see how the aiming direction relates to the result. Release to take the shot, watch the collision, and wait for the opponent's action before deciding what to do next.
 
-> 本站是社区游戏的非官方浏览器入口。游戏、美术素材及相关权利归原作者所有。
+![Pen Fight opening position](pen-fight-play-0.webp)
 
-## 游戏玩法
+The immediate objective is simple, but the desk creates a positional puzzle. Look at the nearest edge behind the opponent and the space behind your own pen. If a direct hit would carry both pens toward danger, consider a more restrained angle. Learning to stop in a useful position can be more valuable than trying to win with the first move.
 
-![Pen Fight 开局画面](pen-fight-play-0.webp)
+## Read the collision
 
-1. 按住红色笔并拖动鼠标，观察瞄准线和力度。
-2. 笔会朝拖动方向的反方向弹出，拖得越远，通常冲量越大。
-3. 松开鼠标完成一次攻击，利用碰撞和桌面边缘把蓝色笔推出场外。
-4. 蓝色对手行动后继续下一回合；蓝色笔先出界即获胜，红色笔先出界则失败。
+Pens are long objects rather than round balls. Contact near a tip can produce a different rotation from contact near the middle. A glancing hit may redirect an opponent without transferring all your motion straight ahead. Watch the entire movement after each release, not just the first impact. The final resting position tells you what the next turn will look like.
 
-## 操作原理与实战攻略
+![Pen Fight collision example](pen-fight-play-1.webp)
 
-![Pen Fight 碰撞过程](pen-fight-play-1.webp)
+A practical learning exercise is to change only one decision between attempts. Keep the direction similar and reduce the force, or keep the force modest and change the angle. This makes it easier to understand what caused a result. Randomly changing everything at once can make a lucky win feel good, but it teaches less about repeating the same success.
 
-- **反向蓄力：** 把拖动动作理解成拉弹弓。想向右上方出击，就向左下方拖动。
-- **先控角度，再加力度：** 直线猛撞容易让双方一起接近边缘。优先寻找能把对手推向最近桌边的斜角。
-- **利用笔身碰撞：** 笔是细长物体，撞击笔尖、笔尾与中部会产生不同的旋转。侧向擦碰通常比正面碰撞更适合改变对手方向。
-- **保留安全距离：** 自己靠近桌边时先回到中心区域，不要为了高伤害把红色笔一同送出界。
-- **观察对手下一回合：** 蓝色笔会反击。一次攻击后若停在对手的直线路径上，很容易被立即推出边界。
+## Balance attack and safety
 
-![Pen Fight 对局结果](pen-fight-play-2.webp)
+Before releasing, ask where your pen is likely to finish. A tempting attack can leave you exposed to a straightforward reply. When you are near an edge, a safer position may be worth more than an aggressive collision. There is no need to treat every turn as a maximum-power attempt. A controlled move can create a better opportunity for the following turn.
 
-## 网站内容
+The blue opponent's position matters just as much as yours. Notice whether the pen is parallel to an edge, pointing toward open space, or positioned to strike back along a clear line. These observations help you choose a direction deliberately. The game remains a physics challenge, so use these ideas as things to test rather than guaranteed winning formulas.
 
-- 内嵌自托管游戏，无需安装或下载。
-- 完整的玩法说明、技巧攻略和常见问题。
-- 本地成绩登记、排名与分数区间占比；成绩保存在当前浏览器中。
-- 四段 YouTube 实战视频，便于快速理解操作节奏。
-- 响应式导航、紧凑的 Play More 游戏卡片及移动端布局。
-- 独立的 About Us、Privacy Policy、Contact、Terms of Service 页面。
-- 静态导出、Sitemap、Canonical URL、Open Graph metadata 和隐私友好的站点统计说明。
+![Pen Fight result screen](pen-fight-play-2.webp)
 
-## Plausible 统计
+## Use the website alongside the game
 
-主站在根布局中通过 `next/script` 加载一次 Plausible 兼容统计脚本：
+The website brings the game together with explanations, practical tips, frequently asked questions and gameplay videos. If the drag direction feels confusing, read the controls and watch an example before trying again. A short explanation can be easier to apply when you immediately return to the same situation in the game.
 
-```text
-Script: https://data.1back.link/js/app.js
-API: https://data.1back.link/api/send
-Domain: penfight.org
-```
+The surrounding page also offers related games through its navigation and game cards. Those links are separate activities, not additional Pen Fight levels. Choose them when you want a different kind of challenge, and return to the main game when you want another desk duel. The website does not need to be treated as a technical project to enjoy it.
 
-除聚合页面访问外，站点还记录导航点击、游戏启动与全屏、成绩登记、FAQ 展开、滚动深度和停留时间等有限事件。滚动深度与定时停留使用 `interactive: false`，不会改变跳出判定；游戏启动、成绩登记等真实操作仍作为互动事件。成绩事件仅使用分数区间，不发送玩家姓名、战术备注内容、精确分数或本地排行榜。详细说明见网站的 Privacy Policy。
+## Keep personal results in perspective
 
-## 技术栈
+The site's local result features are intended for personal tracking in the current browser. A locally recorded result is not a verified global competition entry. If you use a nickname or notes, choose information you are comfortable keeping on that device. Shared computers deserve particular care because another person may use the same browser profile later.
 
-- Next.js 16（App Router）
-- React 19
-- TypeScript
-- Tailwind CSS 4
-- 静态导出至 `out/`
-- GitHub 仓库存放编译产物，Cloudflare Pages 托管
+Clearing browser storage or moving to another device can affect locally retained records. Do not assume that a result will follow you automatically between browsers. If a particular score matters to you, keep your own record as well. Local tracking is a convenient companion to play, not a substitute for a durable personal archive.
 
-## 本地开发
+## A comfortable short session
 
-需要 Node.js 20 或更新版本。所有命令都应在项目根目录执行：
+A desktop pointing device gives you room to learn the drag gesture and observe the aiming line. Keep the game area fully visible, avoid accidental page scrolling during a move, and take a moment to locate the active controls before starting. Screen size and input behavior vary between devices, so do not assume that a narrow phone display will feel identical to a desktop.
 
-```powershell
-cd D:\03_website\18-pen-fight
-npm install
-npm run dev
-```
+If the game does not respond as expected, first make sure it has finished loading and that your pointer is interacting with the game rather than the surrounding page. Avoid reloading immediately after a result you wanted to record. The site's help text and videos can clarify the intended interaction without requiring you to guess from a single failed attempt.
 
-浏览器访问 `http://localhost:3000/`。如果出现“`next` 不是内部或外部命令”，说明依赖尚未安装，请先执行 `npm install`。
+## Independent game destination
 
-常用检查命令：
+Pen Fight is an unofficial browser destination. Game names, artwork and other creative materials remain associated with their respective owners. The site provides a place to play and learn, not a claim of ownership over every game shown in its recommendations.
 
-```powershell
-npm run lint
-npm run build
-<<<<<<< HEAD
-=======
-npm run build:game
->>>>>>> 95a9c74 (add install-app feature)
-```
+For details about the website and visitor information, use its About, Privacy, Contact and Terms pages. When reporting a problem, describe the device, browser and action that led to it without including passwords or other sensitive information. A clear description of what you expected and what happened is more useful than a score alone.
 
-## 构建并保留 out/.git
-
-部署仓库位于 `out/`，与项目源码仓库相互独立。请使用专用命令：
-
-```powershell
-cd D:\03_website\18-pen-fight
-npm run build-preserve-git
-```
-
-该命令会自动：
-
-1. 临时保存 `out/.git` 和 `out/README.md`。
-2. 在 `.codex-static-build/` 中执行一次干净的 Next.js 静态导出。
-3. 替换旧的静态网站文件，但不删除部署仓库的 Git 历史。
-4. 恢复 `out/.git` 和 `out/README.md`。
-5. 首次运行时初始化 `out/.git`、切换到 `main` 分支，并设置：
-
-```text
-origin = https://github.com/mooyu-king/pen-fight.git
-```
-
-因此，运行过 `npm run build-preserve-git` 后，不需要再次执行 `git init` 或 `git remote add origin`。
-
-## 首次提交编译产物
-
-完成构建后，进入 `out` 仓库提交：
-
-```powershell
-cd D:\03_website\18-pen-fight\out
-git status
-git add -A
-git commit -m "first commit"
-git push -u origin main
-```
-
-后续更新网站时：
-
-```powershell
-cd D:\03_website\18-pen-fight
-npm run build-preserve-git
-cd out
-git add -A
-git commit -m "Update Pen Fight site"
-git push
-```
-
-> 提交前建议先执行 `git status`，确认变更只包含准备部署的静态文件。构建脚本只负责构建、保留仓库和配置远程地址，不会自动提交或推送。
-
-## Cloudflare Pages 配置
-
-GitHub 仓库本身已经是编译完成的静态网站，因此 Cloudflare Pages 连接 `mooyu-king/pen-fight` 后可按纯静态站点设置：
-
-- Production branch：`main`
-- Framework preset：`None`
-- Build command：留空
-- Build output directory：`.`
-- 自定义域名：`penfight.org`
-
-部署后请检查首页、`/about/`、`/privacy/`、`/contact/`、`/terms/`、游戏 iframe、图片、视频和移动端导航是否可正常访问。
-
-## 目录说明
-
-```text
-18-pen-fight/
-├─ public/                 图片、Logo 与自托管游戏文件
-│  └─ game/                iframe 加载的游戏静态资源
-├─ scripts/
-│  └─ build-preserve-git.mjs
-├─ src/app/                首页、信任页面与站点组件
-├─ out/                    编译后的独立部署仓库
-│  ├─ .git/                必须保留的 Git 历史和远程配置
-│  └─ README.md            GitHub 仓库说明
-└─ README.md               源码项目说明
-```
-
-## 图片与数据说明
-
-网站 Logo 同时用于顶部导航和浏览器 favicon。页面中的多张 `pen-fight-*.webp` 图片分布在玩法、攻略、游戏推荐等内容区域。互动区的成绩与昵称只保存在用户当前浏览器的 `localStorage` 中，清除浏览器数据后记录会消失。
-
-## 维护提醒
-
-- 每次发布都使用 `npm run build-preserve-git`，不要直接删除整个 `out/`。
-- 不要在项目根目录执行部署仓库的 `git add` 和 `git push`；部署命令必须在 `out/` 中执行。
-- 更换 Logo 或游戏截图后重新构建，静态文件会自动同步到 `out/`。
-- 若 GitHub 远程仓库地址发生变化，请同步修改 `scripts/build-preserve-git.mjs` 中的 `deployRemote`。
+[Return to Pen Fight](https://penfight.org/)
