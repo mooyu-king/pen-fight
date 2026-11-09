@@ -1,10 +1,10 @@
 {
   "game": "Pen Fight: Desk Legends",
   "version": "0.1.0",
-  "buildId": "2026-11-07T18-07-35-208Z-dbd18517ce65",
-  "builtAt": "2026-11-07T18:07:35.208Z",
+  "buildId": "2026-11-09T15-17-31-943Z-40bb5f5d557b",
+  "builtAt": "2026-11-09T15:17:31.943Z",
   "officialSite": "https://penfight.org",
-  "manifestSha256": "dbd18517ce65e4a048e9aca05e7beeb7816031af58bd6bdd67c62746857940df",
+  "manifestSha256": "40bb5f5d557b8b3d598f09a77dc2b748b952c154f84b11fd8c18c8335b1251c0",
   "logoSha256": "b78fc23bef90e3664d54a66335dc2bf5f0ca01f058e18eca1461758ae4d693ff",
   "copyright": "Original content: penfight.org contributors. Third-party rights and licenses retained."
 }
