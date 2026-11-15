@@ -1,0 +1,12 @@
+/.git
+/.git/**
+/.wrangler/**
+/README*
+/readme*
+/wrangler.*
+/.assetsignore
+/.gitignore
+/HANDOFF.md
+/AGENTS.md
+/node_modules/**
+/.env*
